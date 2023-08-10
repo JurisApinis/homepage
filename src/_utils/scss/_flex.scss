@@ -1,0 +1,118 @@
+$flex-dir: (
+  'row': row,
+  'rowrev': row-reverse,
+  'col': column,
+  'colrev': column-reverse,
+);
+$jc: (
+  'start': flex-start,
+  'end': flex-end,
+  'center': center,
+  'sb': space-between,
+  'se': space-evenly,
+  'sa': space-around,
+);
+$ai: (
+  'start': flex-start,
+  'end': flex-end,
+  'center': center,
+  'stretch': stretch,
+);
+$ac: (
+  'start': flex-start,
+  'end': flex-end,
+  'center': center,
+  'stretch': stretch,
+  'sb': space-between,
+  'se': space-evenly,
+  'sa': space-around,
+);
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+
+    &.inline {
+        display: inline-flex;
+    }
+
+    &.nowrap {
+        flex-wrap: nowrap;
+    }
+
+    &.wrap {
+        flex-wrap: wrap;
+    }
+
+    @each $breakPointKey, $breakPointValue in $breakPoints {
+        @include resp($breakPointKey) {
+            &.#{$breakPointKey}-inline {
+                display: inline-flex !important;
+            }
+        
+            &.#{$breakPointKey}-nowrap {
+                flex-wrap: nowrap !important;
+            }
+
+            &.#{$breakPointKey}-wrap {
+                flex-wrap: wrap;
+            }
+        }
+    }
+
+    @each $name, $value in $flex-dir {
+        &.dir-#{$name} {
+            flex-direction: $value;
+        }
+
+        @each $breakPointKey, $breakPointValue in $breakPoints {
+            @include resp($breakPointKey) {
+                &.#{$breakPointKey}-dir-#{$name} {
+                    flex-direction: $value !important;
+                }
+            }
+        }
+    }
+
+    @each $name, $value in $jc {
+        &.jc-#{$name} {
+            justify-content: $value;
+        }
+
+        @each $breakPointKey, $breakPointValue in $breakPoints {
+            @include resp($breakPointKey) {
+                &.#{$breakPointKey}-jc-#{$name} {
+                    justify-content: $value !important;
+                }
+            }
+        }
+    }
+
+    @each $name, $value in $ai {
+        &.ai-#{$name} {
+            align-items: $value;
+        }
+
+        @each $breakPointKey, $breakPointValue in $breakPoints {
+            @include resp($breakPointKey) {
+                &.#{$breakPointKey}-ai-#{$name} {
+                    align-items: $value !important;
+                }
+            }
+        }
+    }
+
+    @each $name, $value in $ac {
+        &.ac-#{$name} {
+            align-content: $value;
+        }
+
+        @each $breakPointKey, $breakPointValue in $breakPoints {
+            @include resp($breakPointKey) {
+                &.#{$breakPointKey}-ac-#{$name} {
+                    align-content: $value !important;    
+                }
+            }
+        }
+    }
+}

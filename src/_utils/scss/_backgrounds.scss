@@ -1,0 +1,27 @@
+$bgColors: 'bg-main', 'bg-main-transparent', 'bg-counter-main', 'bg-counter-main-transparent';
+$bgColors2: 'primary', 'secondary';
+
+@each $color in $bgColors {
+    .#{$color} {
+        background-color: var(--#{$color});
+        &--hover {
+            &:hover {
+                background-color: var(--#{$color});
+            }
+        }
+    }
+}
+
+.bg {
+    @each $color in $bgColors2 {
+        &-#{$color} {
+            background-color: var(--#{$color});
+            &--hover {
+                &:hover {
+                    background-color: var(--#{$color});
+                }
+            }
+        }
+    }
+    
+}

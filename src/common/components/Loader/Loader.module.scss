@@ -1,0 +1,69 @@
+.wrapper {
+    width: 100px;
+    height: 70px;
+    position: relative;
+}
+
+.central,
+.right,
+.small,
+.left {
+    position: absolute;
+    z-index: 1;
+}
+
+.central {
+    z-index: 2;
+    top: calc(50% - 23px);
+    left: calc(50% - 23px);
+    animation-duration: 3s;
+
+    svg {
+        width: 46px;
+        height: 46px;
+    }
+}
+
+.right {
+    top: 0;
+    left: 58px;
+    animation-duration: 2s;
+
+    svg {
+        width: 42px;
+        height: 42px;
+    }
+}
+
+.left {
+    top: 10%;
+    left: 5%;
+    animation-duration: 1s;
+    
+    svg {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.small {
+    bottom: 0;
+    right: 60%;
+    animation-duration: 3s;
+    
+    svg {
+        width: 23px;
+        height: 23px;
+    }
+}
+
+.rotate {
+    animation-name: rotate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+    0% {transform: rotateZ(0deg)}
+    100% {transform: rotateZ(360deg)}
+}

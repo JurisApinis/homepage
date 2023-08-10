@@ -1,0 +1,36 @@
+.burger {
+    text-align: center;
+    cursor: pointer;
+
+    :global() {
+        span {
+            display: block;
+            height: 4px;
+            width: 24px;
+            background-color: var(--primary);
+            transition: all 0.3s ease;
+            
+            &:nth-child(2) {
+                margin: 4px 0;
+            }
+        }
+    }
+
+    &.active {
+        span {
+            &:first-child {
+                transform: rotate(45deg);
+                transform-origin: left;
+            }
+
+            &:nth-child(2) {
+                width: 0px;
+            }
+
+            &:last-child {
+                transform: rotate(-45deg);
+                transform-origin: left;
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.navBtn {
+    text-transform: uppercase;
+    padding: 6px 12px;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        opacity: 1;
+        color: var(--text-main);
+    }
+}
+
+.active {
+    opacity: 1;
+    color: var(--text-active);
+    &:hover {
+        color: var(--text-active-secondary);
+    }
+}
+
+.nonActive {
+    color: var(--text-main-transparent);
+}

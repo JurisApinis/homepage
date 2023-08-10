@@ -1,0 +1,71 @@
+.wrapper {
+    position: relative;
+
+    .selected {
+        outline: none;
+        padding: 10px 16px;
+        width: 100%;
+        height: 49px;
+        background-color: transparent;
+        border-width: 1px;
+        border-style: solid;
+        border-color: var(--input-border);
+        transition: all 0.3s ease;
+        cursor: pointer;
+
+        :global {
+            span {
+                opacity: 0.5;
+            }
+        }
+    }
+
+    .active {
+        border-color: var(--input-active);
+        :global {
+            span {
+                opacity: 1;
+            }
+        }
+    }
+
+    .arrow {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-2.5px);
+        width: 10px;
+        height: 10px;
+        border-width: 5px;
+        border-left-color: transparent !important;
+        border-right-color: transparent !important;
+        border-bottom-color: transparent !important;
+        border-style: solid;
+        border-top-color: var(--primary);
+    }
+
+    .list {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        transform: translateY(100%);
+        border-width: 1px;
+        border-style: solid;
+        border-color: var(--input-border);
+        background: var(--bg-main);
+        z-index: 2;
+        max-height: 225px;
+        overflow-y: scroll;
+
+        &Item {
+            height: 49px;
+            padding: 10px 16px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+
+            &:hover {
+                color: var(--primary);
+            }
+        }
+    }
+}

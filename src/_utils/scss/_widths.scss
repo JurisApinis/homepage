@@ -1,0 +1,28 @@
+$widths: 25, 40, 50, 75, 100;
+$floatWidths: 33, 66;
+
+@mixin generateWidths () {
+    @each $widValue in $widths {
+        &-#{$widValue} {
+            width: #{$widValue + '%'};
+        }
+    }
+
+    @each $floatWidValue in $floatWidths {
+        &-#{$floatWidValue} {
+            width: #{$floatWidValue + '.' + $floatWidValue + '%'};
+        }
+    }
+}
+
+.wid {
+    @include generateWidths();
+}
+
+@each $breakPointKey, $breakPointValue in $breakPoints {
+    .#{$breakPointKey}-wid {
+        @include resp($breakPointKey) {
+            @include generateWidths();
+        }
+    }
+}

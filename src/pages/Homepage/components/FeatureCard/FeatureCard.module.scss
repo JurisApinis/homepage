@@ -1,0 +1,34 @@
+@import '../../../../_utils/scss/resp.scss';
+
+.card {
+    height: calc(100vw / 4);
+
+    @include resp('xs')  {
+        height: calc(100vw)
+    }
+
+    @include resp('sm') {
+        height: calc(100vw / 2);
+    }
+
+    @include resp('md') {
+        height: calc(100vw / 2);
+    }
+}
+
+.cardContent {
+    height: calc(100vw / 8);
+    max-height: 200px;
+
+    @include resp('md') {
+        height: calc(100vw / 2);
+    }
+
+    @include resp('sm') {
+        height: calc(100vw / 2);
+    }
+
+    @include resp('xs')  {
+        height: calc(100vw)
+    }
+}

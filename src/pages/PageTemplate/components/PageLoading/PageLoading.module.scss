@@ -1,0 +1,96 @@
+$bikeAnimationDuration: 2s;
+$letterAnimationDelay: 0.2s;
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.name {
+    position: absolute;
+    z-index: 3;
+    top: calc(50% + 19px);
+    right: calc(50% - 173px);
+    overflow: hidden;
+    font-size: 55px;
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    :global {
+        div {
+            display: inline-flex;
+        }
+    }
+}
+
+.letter {
+    display: inline-block;
+    transform-style: preserve-3d;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-name: letter;
+    transform: translateY(-100%) rotateY(360deg);
+
+    @for $i from 1 through 4 {
+        &:nth-child(#{$i})  {
+            animation-delay: $i * $letterAnimationDelay;
+        }
+    }
+}
+
+.bike {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    animation-timing-function: ease-in-out;
+    animation-duration: $bikeAnimationDuration;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-name: ride;
+}
+
+@keyframes ride {
+    0% {
+        top: 0;
+        right: 0;
+        transform: scale(0.1);
+    }
+    70% {
+        top: 35%;
+        right: 80%;
+        transform: scale(0.8);
+    }
+    80% {
+        top: 40%;
+        right: 70%;
+        transform: scale(0.9);
+    }
+    90% {
+        top: 42%;
+        right: 60%;
+        transform: scale(1);
+    }
+    100% {
+        top: calc(50% - 81px);
+        right: calc(50% - 51px);
+        transform: scale(1);
+    }
+}
+
+@keyframes letter {
+    0% {
+        transform: translateY(-100%) rotateY(360deg);
+    }
+    20% {
+        transform: translateY(+50%) rotateY(0deg);
+    }
+    100% {
+        transform: translateY(0%) rotateY(720deg);
+    }
+}

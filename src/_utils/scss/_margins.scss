@@ -1,0 +1,37 @@
+$mSteps: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
+$mStepLength: 4;
+$mDir: (
+    r: '-right',
+    l: '-left',
+    t: '-top',
+    b: '-bottom',
+    a: '',
+    x: '-right' '-left',
+    y: '-top' '-bottom'
+);
+
+@mixin generateMarginClasses() {
+    @each $mDirKey, $mDirValue in $mDir {
+        &#{$mDirKey} {
+            @each $mStep in $mSteps {
+                &-#{$mStep} {
+                    @for $i from 0 to length($mDirValue) {
+                        margin#{nth($mDirValue, $i + 1)}: $mStep * $mStepLength + px;       
+                    }
+                }
+            }
+        }
+    }
+}
+
+.m {
+    @include generateMarginClasses();
+}
+
+@each $breakPointKey, $breakPointValue in $breakPoints {
+    @include resp($breakPointKey) {
+        .#{$breakPointKey}-m {
+            @include generateMarginClasses();
+        }
+    }
+}

@@ -1,0 +1,39 @@
+.label {
+    display: inline-block;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    position: relative;
+    width: 100%;
+}
+
+.input {
+    outline: none;
+    padding: 10px 16px;
+    width: 100%;
+    background-color: transparent;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--input-border);
+    transition: all 0.3s ease;
+    
+    &Error {
+        border-color: var(--input-error);
+    }
+    &Active,
+    &:focus {
+        border-color: var(--input-active);
+    }
+}
+
+.required {
+    position: absolute;   
+    top: 50%;
+    right: 4px;
+    transform: translate(-50%, -50%);
+    color: var(--input-error);
+}
+
+.error::placeholder,
+.error {
+    color: var(--input-error);
+}

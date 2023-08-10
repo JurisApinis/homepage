@@ -1,0 +1,28 @@
+$textColors: 'text-main', 'text-main-transparent', 'text-active', 'text-active-secondary';
+$textColors2: 'primary', 'secondary', 'white', 'black';
+
+@each $color in $textColors {
+    .#{$color} {
+        color: var(--#{$color});
+        &--hover {
+            &--#{$color} {
+                &:hover {
+                    color: var(--#{$color});
+                }
+            }    
+        }
+    }
+}
+
+.text {
+    @each $color in $textColors2 {
+        &-#{$color} {
+            color: var(--#{$color});
+            &--hover {
+                &:hover {
+                    color: var(--#{$color});
+                }
+            }
+        }
+    }
+}

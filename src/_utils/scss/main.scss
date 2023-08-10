@@ -1,0 +1,63 @@
+@import './_reset.scss';
+@import './_resp.scss';
+@import './_colors.scss';
+@import './_widths.scss';
+@import './_flex.scss';
+@import './_margins.scss';
+@import './_paddings.scss';
+@import './_fonts.scss';
+@import './_backgrounds.scss';
+@import './_textColors.scss';
+
+$containerMaxWidth: 1200px;
+$containerWidth: 85%;
+
+.container {
+    width: $containerWidth;
+    max-width: $containerMaxWidth;
+    margin: 0 auto;
+}
+
+.h--full {
+    height: 100%;
+}
+
+.text {
+    &--left {
+        text-align: left;
+    }
+
+    &--right {
+        text-align: right;
+    }
+
+    &--center {
+        text-align: center;
+    }
+}
+
+@each $breakPointKey, $breakPointValue in $breakPoints {
+    @include resp($breakPointKey) {
+        .#{$breakPointKey}-hide {
+            display: none;
+        }
+
+        .#{$breakPointKey}-text {
+            &--left {
+                text-align: left;
+            }
+        
+            &--right {
+                text-align: right;
+            }
+        
+            &--center {
+                text-align: center;
+            }
+        }
+    }
+}
+
+.pointer {
+    cursor: pointer;
+}

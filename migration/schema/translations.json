@@ -1,0 +1,130 @@
+{
+    "common": {
+        "name": "common.name",
+        "email": "common.email",
+        "phoneNumber": "common.phone",
+        "send": "common.send",
+        "contactUs": "common.contactUs",
+        "message": "common.message",
+        "sended": "common.sended",
+        "rate": "common.rate",
+        "selectDate": "common.selectDate"
+    },
+    "errors": {
+        "wrongEmail": "errors.wrongEmail",
+        "requiredField": "errors.requiredField"
+    },
+    "header": {
+        "navigation": {
+            "home": "header.navigation.home",
+            "categories": "header.navigation.categories",
+            "feedbacks": "header.navigation.feedbacks"
+        }
+    },
+    "footer": {
+        "contacts": {
+            "heading": "footer.contacts.heading"
+        }
+    },
+    "homepage": {
+        "banner": {
+            "title": "homepage.banner.title",
+            "subHeading": "homepage.banner.subHeading"
+        },
+        "about": {
+            "heading": "homepage.about.heading",
+            "paragraphOne": "homepage.about.paragraphOne",
+            "paragraphTwo": "homepage.about.paragraphTwo"
+        },
+        "features": {
+            "1": {
+                "text": "homepage.features.1.text",
+                "btnValue": "homepage.features.1.btnValue"
+            },
+            "2": {
+                "text": "homepage.features.2.text",
+                "btnValue": "homepage.features.2.btnValue"
+            },
+            "3": {
+                "text": "homepage.features.3.text",
+                "btnValue": "homepage.features.3.btnValue"
+            },
+            "4": {
+                "text": "homepage.features.4.text",
+                "btnValue": "homepage.features.4.btnValue"
+            }
+        },
+        "categories": {
+            "heading": "homepage.categories.heading",
+            "text": "homepage.categories.text",
+            "list": {
+                "1": {"heading": "homepage.categories.list.1.heading", "text": "homepage.categories.list.1.text"},
+                "2": {"heading": "homepage.categories.list.2.heading", "text": "homepage.categories.list.2.text"},
+                "3": {"heading": "homepage.categories.list.3.heading", "text": "homepage.categories.list.3.text"},
+                "4": {"heading": "homepage.categories.list.4.heading", "text": "homepage.categories.list.4.text"}
+            }
+        }
+    },
+    "categories": {
+        "list": {
+            "1": {
+                "category": "categories.list.1.category",
+                "transport": "categories.list.1.transport",
+                "head": "categories.list.1.head",
+                "options": {
+                    "1": {"option": "categories.list.1.options.1.option"},
+                    "2": {"option": "categories.list.1.options.2.option"},
+                    "3": {"option": "categories.list.1.options.3.option"}
+                }
+            },
+            "2": {
+                "category": "categories.list.2.category",
+                "transport": "categories.list.2.transport",
+                "head": "categories.list.2.head",
+                "options": {
+                    "1": {"option": "categories.list.2.options.1.option"},
+                    "2": {"option": "categories.list.2.options.2.option"},
+                    "3": {"option": "categories.list.2.options.3.option"}
+                }
+            },
+            "3": {
+                "category": "categories.list.3.category",
+                "transport": "categories.list.3.transport",
+                "head": "categories.list.3.head",
+                "options": {
+                    "1": {"option": "categories.list.3.options.1.option"},
+                    "2": {"option": "categories.list.3.options.2.option"},
+                    "3": {"option": "categories.list.3.options.3.option"}
+                }
+            },
+            "4": {
+                "category": "categories.list.4.category",
+                "transport": "categories.list.4.transport",
+                "head": "categories.list.4.head",
+                "options": {
+                    "1": {"option": "categories.list.4.options.1.option"},
+                    "2": {"option": "categories.list.4.options.2.option"},
+                    "3": {"option": "categories.list.4.options.3.option"}
+                }
+            }
+        },
+        "theory": {
+            "heading": "categories.theory.heading",
+            "table": {
+                "head": {
+                    "category": "categories.theory.table.head.category",
+                    "date": "categories.theory.table.head.date",
+                    "time": "categories.theory.table.head.time",
+                    "place": "categories.theory.table.head.place"
+                }
+            },
+            "enroll": {
+                "heading": "categories.theory.enroll.heading",
+                "text": "categories.theory.enroll.text"
+            }
+        }
+    },
+    "feedbacks": {
+        "heading": "feedbacks.heading"
+    }
+}

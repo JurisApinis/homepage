@@ -1,0 +1,58 @@
+$size: (
+    title-xl: 64px,
+    title-md: 48px,
+    title-sm: 44px,
+    heading-xl: 38px,
+    heading-md: 28px,
+    heading-sm: 22px,
+    xl: 24px,
+    md: 20px,
+    sm: 18px,
+    xs: 18px,
+    xxs: 10px,
+);
+
+$line: (
+    title-xl: 72px,
+    title-md: 48px,
+    title-sm: 50px,
+    heading-xl: 46px,
+    heading-md: 36px,
+    heading-sm: 28px,
+    xl: 36px,
+    md: 36px,
+    sm: 27px,
+    xs: 18px,
+    xxs: 12px
+);
+
+$weight: (
+    bold: 900,
+    bolded: 500,
+    regular: 400,
+);
+
+$lt-spacing: (
+    sm: 2px
+);
+
+.text {
+    @each $sizeKey, $sizeValue in $size {
+        &--#{$sizeKey} {
+            font-size: $sizeValue;
+            line-height: map-get($line, $sizeKey);
+        }
+    }
+    
+    @each $weightKey, $weightValue in $weight {
+        &--#{$weightKey} {
+            font-weight: $weightValue;
+        }
+    }
+    
+    @each $lt-spacingKey, $lt-spacingValue in $lt-spacing {
+        &--spaced-#{$lt-spacingKey} {
+            letter-spacing: $lt-spacingValue;
+        }
+    }
+}

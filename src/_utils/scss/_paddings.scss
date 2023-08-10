@@ -1,0 +1,37 @@
+$pSteps: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
+$pStepLength: 4;
+$pDir: (
+    r: '-right',
+    l: '-left',
+    t: '-top',
+    b: '-bottom',
+    a: '',
+    x: '-right' '-left',
+    y: '-top' '-bottom'
+);
+
+@mixin generatePaddingClasses() {
+    @each $pDirKey, $pDirValue in $pDir {
+        &#{$pDirKey} {
+            @each $pStep in $pSteps {
+                &-#{$pStep} {
+                    @for $i from 0 to length($pDirValue) {
+                        padding#{nth($pDirValue, $i + 1)}: $pStep * $pStepLength + px;       
+                    }
+                }
+            }
+        }
+    }
+}
+
+.p {
+    @include generatePaddingClasses();
+}
+
+@each $breakPointKey, $breakPointValue in $breakPoints {
+    @include resp($breakPointKey) {
+        .#{$breakPointKey}-p {
+            @include generatePaddingClasses();
+        }
+    }
+}

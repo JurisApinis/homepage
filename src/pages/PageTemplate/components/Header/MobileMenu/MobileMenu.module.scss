@@ -1,0 +1,15 @@
+.menu {
+    position: fixed;
+    top: 48px;
+    right: 0;
+    z-index: 2;
+    width: 0;
+    height: 0;
+    background: var(--bg-main);
+    transition: all 0.3s ease;
+
+    &.active {
+        width: 100%;
+        height: calc(100vh - 48px);
+    }
+}

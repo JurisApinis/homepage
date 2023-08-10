@@ -1,0 +1,31 @@
+.wrapper {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        top: 7.5px;
+        left: 7.5px;
+        transform: rotate(45deg);
+        transition: all 0.3s ease;
+        z-index: 1;
+        background-color: var(--primary);
+    }
+
+    &:hover {
+        &::before {
+            background-color: var(--secondary);
+        }
+    }
+}
+
+.childWrap {
+    position: relative;
+    z-index: 1;
+}

@@ -1,0 +1,38 @@
+.wrapper {
+    position: relative;
+    width: 45px;
+}
+
+.list {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    transform: translateY(100%);
+    z-index: 9;
+
+    &Item {
+        transition: background 0.3s ease;
+        &:hover {
+            transform: scale(1.2); 
+        }
+    }
+}
+
+.arrow {
+    display: inline-block;
+    margin-top: 5px;
+    width: 10px;
+    height: 10px;
+    border-width: 5px;
+    border-left-color: transparent !important;
+    border-right-color: transparent !important;
+    border-bottom-color: transparent !important;
+    border-style: solid;
+    border-top-color: var(--primary);
+}
+
+.active {
+    transform: rotate(180deg);
+    margin-top: -5px;
+}
