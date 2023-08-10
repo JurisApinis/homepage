@@ -113,6 +113,16 @@ https://console.firebase.google.com/
       }
   ``` 
 
+---
 
+# Images
 
+---
 
+Are stored at google cloud.
+
+You can simply change it. Remove old and add new with the same name.
+
+> Notice to get correct aspect ratio for image.
+
+> Images with huge resolution will slow down your website.
