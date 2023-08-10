@@ -73,7 +73,7 @@ const CategoryRow: React.FC<Readonly<I_CategoryRow>> = ({ category, transport, l
                 transport={transport}
                 border={responsive.categoryCard.border}
             />
-            <div className="flex dir-col ai-center jc-sa" style={responsive.listMargin}>
+            <div className={cn(`flex dir-col ai-center jc-sa`, {'wid-50': responsive.categoryCard.width === '25'})} style={responsive.listMargin}>
                 <List head={listHeading} list={Object.values(list).map((o) => o.option)} />
             </div>
         </div>
