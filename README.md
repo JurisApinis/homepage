@@ -127,7 +127,7 @@ https://console.firebase.google.com/
 
         Single option
 
-        {
+        <incremented number>: {
             option: string
         }
     ```
@@ -146,6 +146,8 @@ https://console.firebase.google.com/
     Result
 
     <img width="1263" alt="Screenshot 2023-08-10 at 20 20 35" src="https://github.com/JurisApinis/homepage/assets/141917132/f00d74df-b74d-4c00-9be6-427d3938e880">
+
+
 
     ``` diff 
     - Do not provide any changes to another added key. Can be changed only values (string/text) stored under objects keys.
