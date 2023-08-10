@@ -5,3 +5,6 @@ firestore.rules
 firestore.indexes.json
 storage.rules
 /dist
+.firebaserc
+README.md
+.env
