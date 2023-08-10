@@ -2,6 +2,12 @@
 
 ---
 
+**Meta data**
+
+`VITE_DESCRIPTION` - set description for meta description
+
+`VITE_KEYS` - set keys for meta keys
+
 **Default variables**
 
 `VITE_DEFAULT_THEME` - set default theme.
