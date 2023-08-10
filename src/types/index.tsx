@@ -117,6 +117,7 @@ export type T_Translations = {
             heading: string;
             table: {
                 head: { category: string; date: string; time: string; place: string };
+                empty: string;
             };
             enroll: { heading: string; text: string };
         };

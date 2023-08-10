@@ -14,6 +14,7 @@ import ClassRow from './components/ClassRow';
 import { Form } from '../../common/components/Form';
 import Loader from '../../common/components/Loader';
 import ReCaptcha from '../../common/components/ReCaptcha';
+import EmptyView from './components/ClassRow/EmptyView';
 
 /**
  * Custom hooks
@@ -83,7 +84,7 @@ const Categories: React.FC = () => {
 
     const classWorksTable = useMemo<Array<T_ClassWork>>(() => {
         const result: Array<T_ClassWork> = [tableHead as T_ClassWork];
-        if (classWorks) {
+        if ((classWorks as Array<T_ClassWork>)) {
             (classWorks as Array<T_ClassWork>).forEach((c) => result.push(c));
         }
         return result;
@@ -105,18 +106,23 @@ const Categories: React.FC = () => {
             <IntroText heading={t('categories.theory.heading')} />
 
             {classWorks ? (
-                classWorksTable.map((row, i) => (
-                    <ClassRow
-                        key={i === 0 ? 'head' : row.id}
-                        head={i === 0}
-                        item={{
-                            category: row.category,
-                            time: row.time,
-                            date: row.date,
-                            place: row.place,
-                        }}
-                    />
-                ))
+                <>
+                    {
+                        classWorksTable.map((row, i) => (
+                            <ClassRow
+                                key={i === 0 ? 'head' : row.id}
+                                head={i === 0}
+                                item={{
+                                    category: row.category,
+                                    time: row.time,
+                                    date: row.date,
+                                    place: row.place,
+                                }}
+                            />
+                        ))
+                    }
+                    {classWorksTable.length === 1 && <EmptyView />}
+                </>
             ) : (
                 <div className="flex jc-center">
                     <Loader />

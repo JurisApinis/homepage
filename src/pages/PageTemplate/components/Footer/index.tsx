@@ -117,11 +117,11 @@ const Footer: React.FC = ({}) => {
                             <FBIcon />
                         </SocialLink>
 
-                        <SocialLink href={(import.meta.env.VITE_YT_LINK as string) ?? '#'}>
+                        <SocialLink href={(import.meta.env.VITE_INSTA_LINK as string) ?? '#'}>
                             <InstaIcon />
                         </SocialLink>
 
-                        <SocialLink href={(import.meta.env.VITE_INSTA_LINK as string) ?? '#'}>
+                        <SocialLink href={(import.meta.env.VITE_YT_LINK as string) ?? '#'}>
                             <YTIcon />
                         </SocialLink>
                     </div>
