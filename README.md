@@ -1,5 +1,7 @@
 ## ENV variables
 
+---
+
 **Default variables**
 
 `VITE_DEFAULT_THEME` - set default theme.
@@ -36,21 +38,81 @@
 
 `VITE_FB_MEASURMENT_UD`
 
+**ReCaptcha configuration**
 
-1. root -> npm install
-2. root/migration -> npm install
+`VITE_RECAPTCHA_PUBLIC_KEY`
 
-3. firebase console -> sozdatj proekt
-4. firebase console -> sozdatj firestore -> change rules
-5. firebase console -> sozdatj storage -> change rules
+---
 
-6. fill all env variables.
-7. root npm run build
-8. firebase login
-9. firebase init
-10. root/migration -> npm run sync-env
-11. root/migration -> npm run migration
-12. firebase console upload images.
-13. firebase deploy
-# homepage
-# homepage
+## Github link
+
+---
+
+https://github.com/JurisApinis
+
+---
+
+## ReCaptcha
+
+---
+
+https://www.google.com/recaptcha/about/
+
+---
+
+# EmailJS
+---
+
+https://dashboard.emailjs.com/sign-in
+
+---
+
+## Firebase
+
+---
+
+https://console.firebase.google.com/
+
+### Database Guide
+
+- **Translations**
+
+    ``` diff 
+    - Do not provide any changes to added key. Can be changed only values (string/text) stored under objects keys.
+    ```
+
+- **classWorks**
+
+  https://github.com/JurisApinis/homepage/assets/141917132/0c03aeaa-a3f8-40f6-965f-8584a6f6a626
+
+  > Written keys and types should be identical at video.
+
+  ```JS
+      {
+          category: string;
+          place: string;
+          date: timestamp;
+      }
+  ```
+
+  > Algorithm will automatically filter only actual works. What that's mean ? Algorithm will check what actual time is now (precision in milliseconds), and compare work date and time with actual, if actual is bigger this work not appear in webpage work list.
+
+- **feedbacks**
+
+  https://github.com/JurisApinis/homepage/assets/141917132/0669ea44-212f-4cfb-b4ae-724d84141763
+
+  > Written keys and types should be identical at video.
+
+  > Rate are number in diapozone 1 - 10.
+  
+  ```JS
+      {
+          name: string;
+          message: string;
+          rate: number;
+      }
+  ``` 
+
+
+
+
